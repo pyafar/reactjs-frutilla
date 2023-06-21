@@ -1,6 +1,16 @@
+# Info
+
+I carried out the UI Design of the website.
+The site was developed using React JS.
+Styling was done with CSS and the Bootstrap framework.
+
+## Deploy
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
