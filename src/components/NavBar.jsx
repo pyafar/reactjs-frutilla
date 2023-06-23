@@ -62,7 +62,7 @@ const NavBar = () => {
                         <NavLink className="nav-link" to={"/"}>INICIO</NavLink>
                     </li>
                     <li className="nav-item dropdown">
-                        <NavLink className="nav-link dropdown-toggle" to={"/"} role="button" data-bs-toggle="dropdown" aria-expanded="false">PRODUCTOS</NavLink>
+                        <NavLink className="nav-link dropdown-toggle" to={"#"} role="button" data-bs-toggle="dropdown" aria-expanded="false">PRODUCTOS</NavLink>
                         <ul class="dropdown-menu">
                             <li>
                                 <NavLink className="dropdown-item" to="/category/all">TODOS LOS PRODUCTOS</NavLink>

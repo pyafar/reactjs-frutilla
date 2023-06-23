@@ -3,12 +3,23 @@ import { useParams } from 'react-router-dom'
 import ProductListContainer from '../components/containers/ProductListContainer'
 
 const Category = () => {
-    const {id} = useParams();
+  const { categoryName } = useParams();
 
+  //Esta vista va a recibir todos los productos que coincidan con determinada categoría
   return (
     <div>
-        <h1>CATEGORÍAS</h1>
-        <ProductListContainer id = {id}/>
+      <div>
+  
+          {
+          categoryName !== "all" ?
+          <h2>{categoryName}</h2>
+          :
+          <h2>Todos los productos</h2>
+          }
+
+        <hr className='dividers' />
+      </div>
+      <ProductListContainer />
     </div>
   )
 }
