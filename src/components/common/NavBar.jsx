@@ -1,18 +1,24 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-import CartWidget from "./CartWidget";
-
+import OrderWidget from "./OrderWidget";
+import AccordionMenu from "./../AccordionMenu";
 
 const NavBar = () => {
 
     const [color, setColor] = useState(false);
     const changeColor = () => {
-        if (window.scrollY >= 150) {
+        if (window.scrollY >= 160) {
             setColor(true);
         } else {
             setColor(false);
         }
     }
+
+    const [isProductMenuOpen, setProductMenuOpen] = useState(false);
+
+    const toggleProductMenu = () => {
+        setProductMenuOpen(!isProductMenuOpen);
+    };
 
     window.addEventListener('scroll', changeColor);
 
@@ -23,11 +29,11 @@ const NavBar = () => {
             <div className="mobile-menu">
                 <div className="menu-links">
 
-                    <NavLink className="nav-item" data-bs-toggle="offcanvas" to="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                    <NavLink className="nav-item" data-bs-toggle="offcanvas" to="#sidebarMenu" role="button" aria-controls="sidebarMenu">
                         <i className="fas fa-bars"></i> MENÚ
                     </NavLink>
 
-                    <div className="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div className="offcanvas offcanvas-start" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenu">
                         <div className="offcanvas-header">
                             <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
@@ -37,9 +43,14 @@ const NavBar = () => {
                                 <li className="nav-item" data-bs-dismiss="offcanvas">
                                     <NavLink className="nav-link" to="/" >INICIO</NavLink>
                                 </li>
-                                <li className="nav-item" data-bs-dismiss="offcanvas">
-                                    <NavLink className="nav-link" to="/category/all" >PRODUCTOS</NavLink>
-                                </li>
+
+                                <button className="nav-link menu-links" onClick={toggleProductMenu}>PRODUCTOS {isProductMenuOpen ? '▲' : '▼'}</button>
+                                {isProductMenuOpen && (
+
+                                    <AccordionMenu toggleProductMenu={toggleProductMenu} />
+
+                                )}
+
                                 <li className="nav-item" data-bs-dismiss="offcanvas">
                                     <NavLink className="nav-link" to="/about">SOBRE MI</NavLink>
                                 </li>
@@ -54,6 +65,7 @@ const NavBar = () => {
                     </div>
                 </div>
             </div>
+
 
             {/* Large Screens */}
             <div className="menu-large">
@@ -89,7 +101,7 @@ const NavBar = () => {
                         <NavLink className="nav-link" to={"/contact"}>CONTACTO</NavLink>
                     </li>
                     <li className="nav-item">
-                        <CartWidget />
+                        <OrderWidget />
                     </li>
                 </ul>
 

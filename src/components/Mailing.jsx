@@ -5,7 +5,7 @@ const Mailing = () => {
         <div className="mailing-container">
             <h2>SUSCRIBITE</h2>
             <hr className='dividers' />
-            <h3>Dejanos tu correo para recibir promociones y novedades.
+            <h3 className='mailing-info'>Dejanos tu correo para recibir promociones y novedades.
                 Podés desuscribirte en cualquier momento
             </h3>
             <div className="input-group mb-3 mailing-form">

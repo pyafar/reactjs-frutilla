@@ -1,5 +1,5 @@
-import headerImg from "../../assets/header-02.png"
-import NavBar from "../NavBar"
+import headerImg from "../../assets/img/header-02.png"
+import NavBar from "./NavBar"
 
 const Header = () => {
     return (

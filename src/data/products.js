@@ -20,9 +20,9 @@ export const productsDB = [
     {
         "id": 3,
         "title": "Tortas Personalizadas",
-        "description": "Torta realizada con bizcochuelo húmedo de chocolate o vainilla. Relleno y cobertura a elección.",
+        "description": "Torta realizada con bizcochuelo húmedo de chocolate o vainilla. Relleno y cobertura a elección. El valor es por kg de torta.",
         "image": "personalizada01.jpg",
-        "price": 0,
+        "price": 4500,
         "category": "tortas",
         "stock": 9
     },

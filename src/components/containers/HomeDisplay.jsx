@@ -9,32 +9,32 @@ const HomeDisplay = () => {
 
 <section className="home-display">
 
-  <article className='card'>
-    <NavLink className="card-link" to="/category/tortas">
+  <article className='card card-home-ds'>
+    <NavLink className="card-link card-home-ds-link" to="/category/tortas">
       <img className="card-img-top" src="img/browniefrutilla.jpg" alt="tortas" />
       <hr className='card-divider' />
       <h3>Tortas</h3>
     </NavLink>
   </article>
 
-  <article className='card'>
-    <NavLink className="card-link" to="/category/cupcake">
+  <article className='card card-home-ds'>
+    <NavLink className="card-link card-home-ds-link" to="/category/cupcakes">
       <img className="card-img-top" src="img/cupcakechoco.jpg" alt="cupcake" />
       <hr className='card-divider' />
-      <h3>Cupcake</h3>
+      <h3>Cupcakes</h3>
     </NavLink>
   </article>
 
-  <article className='card'>
-    <NavLink className="card-link" to="/category/cuadrados">
+  <article className='card card-home-ds'>
+    <NavLink className="card-link card-home-ds-link" to="/category/cuadrados">
       <img className="card-img-top" src="img/cuadradobrownie01.jpg" alt="cuadrado" />
       <hr className='card-divider' />
       <h3>Cuadrados</h3>
     </NavLink>
   </article>
 
-  <article className='card'>
-    <NavLink className="card-link" to="/category/alfajores">
+  <article className='card card-home-ds'>
+    <NavLink className="card-link card-home-ds-link" to="/category/alfajores">
       <img className="card-img-top" src="img/alfabrownie01.jpg" alt="alfajores" />
       <hr className='card-divider' />
       <h3>Alfajores</h3>

@@ -5,7 +5,7 @@ const ProductList = ({products}) => {
 
     return (
 
-        <div>
+        <div className='container-fluid prod-display-cont'>
             {
                 products.map(item =>{
                     return (

@@ -1,15 +1,15 @@
-import Header from "./containers/Header"
-import Footer from "./containers/Footer"
+import Header from "./common/Header"
+import Footer from "./common/Footer"
 import AppRouter from '../routes/AppRouter'
+import OrderContextProvider from "./context/OrderContext"
 
 const MainApp = () => {
   return (
-    <>
-    <Header />
-    <AppRouter/>
-    <Footer />
-
-    </>
+    <OrderContextProvider>
+      <Header />
+      <AppRouter />
+      <Footer />
+    </OrderContextProvider>
   )
 }
 

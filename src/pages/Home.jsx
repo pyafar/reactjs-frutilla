@@ -1,8 +1,6 @@
 import { NavLink } from 'react-router-dom'
-import Banner from '../assets/banner-01.png'
-import HomeDisplay from '../components/HomeDisplay'
-import Mailing from '../components/Mailing'
-
+import Banner from '../assets/img/banner-01.png'
+import HomeDisplay from '../components/containers/HomeDisplay'
 
 const Home = () => {
   return (
@@ -18,7 +16,6 @@ const Home = () => {
       </div>
 
       <HomeDisplay />
-
       <div className="home-info">
         <section className='info-section'>
 
@@ -42,9 +39,6 @@ const Home = () => {
 
         </section>
       </div>
-
-      <Mailing />
-
 
     </>
 

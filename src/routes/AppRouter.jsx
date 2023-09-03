@@ -2,8 +2,10 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from '../pages/Home'
 import Category from '../pages/Category'
-import Cart from '../pages/Cart'
+import Order from '../pages/Order'
 import Detail from '../pages/Detail'
+import Contact from '../pages/Contact'
+import About from '../pages/About'
 
 const AppRouter = () => {
   return (
@@ -15,10 +17,12 @@ const AppRouter = () => {
         <Route path={"category/:categoryName"} element={<Category />}/>
 
         <Route path={'detail/:id'} element = { <Detail /> } />
-
-        <Route path={'/cart'} element = { <Cart /> } />
         
-        <Route path={'/cart'} element = { <Cart /> } />
+        <Route path={'about'} element = { <About /> } />
+
+        <Route path={'/contact'} element = { <Contact /> } />
+        
+        <Route path={'/order'} element = { <Order /> } />
 
     </Routes>
   )
